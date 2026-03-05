@@ -1,0 +1,122 @@
+{
+  "products": [
+    {
+      "id": "product_001",
+      "name": "无线降噪耳机 Pro",
+      "category": "电子产品",
+      "features": [
+        "主动降噪技术，降噪深度达35dB",
+        "30小时超长续航，支持快充",
+        "IPX5级防水防汗",
+        "蓝牙5.3，连接稳定",
+        "触控操作，支持语音助手"
+      ],
+      "specifications": {
+        "driver_size": "10mm",
+        "frequency_response": "20Hz-20kHz",
+        "impedance": "32Ω",
+        "weight": "4.5g (单只)"
+      },
+      "price": "¥599",
+      "original_price": "¥999",
+      "discount": "6折",
+      "promo": "今日限时买一送一！",
+      "shipping": "全国包邮，顺丰快递",
+      "warranty": "1年质保",
+      "return_policy": "7天无理由退换",
+      "stock": 500,
+      "description": "专业级无线降噪耳机，采用行业领先的混合主动降噪技术，适合通勤、办公、学习等多种场景。",
+      "usage_scenarios": [
+        "地铁通勤：有效隔绝环境噪音",
+        "办公室：专注工作不受打扰",
+        "健身房：防水防汗，运动无忧",
+        "学习：沉浸式学习体验"
+      ],
+      "target_audience": ["上班族", "学生", "运动爱好者", "音乐发烧友"],
+      "faq": [
+        {
+          "question": "降噪效果怎么样？",
+          "answer": "采用混合主动降噪技术，降噪深度达35dB，能有效隔绝地铁、办公室等环境噪音。"
+        },
+        {
+          "question": "续航时间多久？",
+          "answer": "单次充电可使用6小时，配合充电仓总续航达30小时，支持快充15分钟使用2小时。"
+        },
+        {
+          "question": "防水等级如何？",
+          "answer": "IPX5级防水，可抵御汗水和小雨，适合运动使用。"
+        }
+      ]
+    },
+    {
+      "id": "product_002",
+      "name": "智能手表 X1",
+      "category": "智能穿戴",
+      "features": [
+        "1.5英寸AMOLED全面屏",
+        "7天超长续航，支持无线充电",
+        "24小时心率血氧监测",
+        "GPS+北斗双模定位",
+        "100+运动模式",
+        "NFC门禁公交卡"
+      ],
+      "specifications": {
+        "screen_size": "1.5英寸",
+        "resolution": "454×454",
+        "battery": "450mAh",
+        "water_resistance": "5ATM",
+        "weight": "38g"
+      },
+      "price": "¥1299",
+      "original_price": "¥1999",
+      "discount": "6.5折",
+      "promo": "前100名送原装表带（价值¥199）",
+      "shipping": "顺丰包邮，24小时内发货",
+      "warranty": "2年质保",
+      "return_policy": "15天无理由退换",
+      "stock": 300,
+      "description": "全能健康智能手表，支持24小时心率血氧监测、睡眠分析、压力检测等健康功能，内置GPS定位和多种运动模式。",
+      "health_features": [
+        "心率监测：24小时连续监测",
+        "血氧检测：单次检测和夜间持续监测",
+        "睡眠分析：深度睡眠、浅睡眠、REM睡眠",
+        "压力检测：实时压力水平评估",
+        "女性健康：生理期预测和提醒"
+      ],
+      "sports_modes": ["跑步", "骑行", "游泳", "登山", "瑜伽", "健身"],
+      "target_audience": ["健身爱好者", "健康关注者", "户外运动者", "商务人士"],
+      "faq": [
+        {
+          "question": "续航时间多久？",
+          "answer": "典型使用场景下续航7天，重度使用约3天，支持无线充电。"
+        },
+        {
+          "question": "防水性能如何？",
+          "answer": "5ATM防水等级，支持游泳和淋浴使用。"
+        },
+        {
+          "question": "健康数据准确吗？",
+          "answer": "采用专业级传感器，数据仅供参考，不能替代医疗设备。"
+        }
+      ]
+    }
+  ],
+  "current_promo": "双十一大促：全场商品6折起，满300减50，新人专享券再减30！",
+  "shipping_info": {
+    "domestic": "全国包邮，24小时内发货，顺丰快递",
+    "international": "支持国际直邮，运费到付",
+    "delivery_time": "省内1-2天，省外3-5天"
+  },
+  "return_policy": {
+    "general": "7天无理由退换货",
+    "quality_issue": "15天质量问题换新",
+    "warranty": "1-2年质保（不同产品不同）",
+    "process": "在线申请退货，顺丰上门取件"
+  },
+  "customer_service": {
+    "phone": "400-123-4567",
+    "wechat": "service_official",
+    "email": "service@example.com",
+    "hours": "9:00-21:00"
+  }
+}

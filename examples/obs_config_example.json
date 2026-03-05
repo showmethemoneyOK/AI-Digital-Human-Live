@@ -1,0 +1,132 @@
+{
+  "obs_websocket": {
+    "host": "localhost",
+    "port": 4455,
+    "password": "your_obs_password",
+    "reconnect_interval": 5,
+    "timeout": 10
+  },
+  "scene_config": {
+    "main_scene": "Live_Scene",
+    "backup_scene": "Backup_Scene",
+    "fallback_scene": "Fallback_Scene"
+  },
+  "sources": {
+    "digital_human_video": {
+      "name": "Digital_Human_Video",
+      "type": "ffmpeg_source",
+      "settings": {
+        "local_file": "",
+        "looping": true,
+        "hw_decode": true
+      }
+    },
+    "background_image": {
+      "name": "Background_Image",
+      "type": "image_source",
+      "settings": {
+        "file": "assets/background.jpg"
+      }
+    },
+    "product_display": {
+      "name": "Product_Display",
+      "type": "browser_source",
+      "settings": {
+        "url": "http://localhost:8080/product",
+        "width": 400,
+        "height": 600
+      }
+    },
+    "danmaku_display": {
+      "name": "Danmaku_Display",
+      "type": "text_gdiplus",
+      "settings": {
+        "text": "欢迎来到直播间！",
+        "font": {
+          "face": "Microsoft YaHei",
+          "size": 24
+        },
+        "color": "#FFFFFF",
+        "background_color": "#00000080"
+      }
+    }
+  },
+  "stream_settings": {
+    "service": "custom",
+    "server": "rtmp://live.tiktok.com/rtmp/",
+    "key": "your_stream_key",
+    "encoder": "obs_x264",
+    "rate_control": "CBR",
+    "bitrate": 4000,
+    "keyint_sec": 2,
+    "profile": "high",
+    "tune": "zerolatency"
+  },
+  "output_settings": {
+    "mode": "simple",
+    "video_encoder": "obs_x264",
+    "audio_encoder": "ffmpeg_aac",
+    "rescaling": false,
+    "output_width": 1080,
+    "output_height": 1920,
+    "fps_type": "common",
+    "fps_common": 30,
+    "fps_numerator": 30,
+    "fps_denominator": 1
+  },
+  "audio_settings": {
+    "sample_rate": 44100,
+    "channels": 2,
+    "audio_tracks": 6,
+    "monitoring_device": "default",
+    "monitoring_device_name": "Default"
+  },
+  "hotkeys": {
+    "start_streaming": "F12",
+    "stop_streaming": "Shift+F12",
+    "switch_scene": "F11",
+    "toggle_mic": "Ctrl+M",
+    "toggle_camera": "Ctrl+C"
+  },
+  "automation": {
+    "auto_start_streaming": true,
+    "auto_stop_after_hours": 24,
+    "auto_switch_fallback_on_error": true,
+    "auto_reconnect_on_disconnect": true,
+    "max_reconnect_attempts": 10
+  },
+  "recording": {
+    "enabled": false,
+    "format": "mp4",
+    "path": "./recordings",
+    "quality": "High",
+    "encoder": "obs_x264",
+    "muxer_settings": ""
+  },
+  "advanced": {
+    "process_priority": "AboveNormal",
+    "renderer": "Direct3D 11",
+    "color_format": "NV12",
+    "color_space": "709",
+    "color_range": "Partial",
+    "buffering": {
+      "enable": true,
+      "ms": 1000
+    },
+    "network": {
+      "bind_ip": "default",
+      "dynamic_bitrate": true,
+      "drop_threshold": 0.1,
+      "congestion_control": true
+    }
+  },
+  "monitoring": {
+    "stats_interval": 5,
+    "log_level": "info",
+    "log_path": "./logs/obs_log.txt",
+    "alert_on_dropped_frames": true,
+    "dropped_frames_threshold": 1,
+    "alert_on_high_cpu": true,
+    "cpu_threshold": 80
+  }
+}
