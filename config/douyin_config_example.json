@@ -1,167 +1,122 @@
 {
-  "platform": {
-    "platform": "douyin",
-    "room_id": "your_douyin_live_room_id",
-    "user_unique_id": "@your_douyin_username",
-    "stream_url": "rtmp://push.douyin.com/rtmp/",
-    "stream_key": "your_stream_key_from_douyin",
-    "timeout": 30
-  },
-  "llm": {
-    "api_key": "your-volcengine-api-key-here",
-    "api_url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
-    "model": "skylark-lite",
-    "temperature": 0.6,
-    "max_tokens": 150,
-    "max_retries": 3
-  },
-  "tts": {
-    "api_key": "your-aliyun-access-key-id:your-aliyun-access-key-secret",
-    "api_url": "https://nls-gateway.cn-shanghai.aliyuncs.com/stream/v1/tts",
-    "voice_id": "xiaoyun",
-    "language": "zh-CN",
-    "format": "mp3",
-    "sample_rate": 16000
-  },
-  "digital_human": {
-    "api_key": "your-guiji-api-key-here",
-    "api_url": "https://api.guiji.ai/v1",
-    "avatar_id": "your-guiji-avatar-id",
-    "render_mode": "local",
-    "app_id": "your-guiji-app-id"
-  },
-  "danmaku": {
-    "app_key": "your-douyin-open-platform-app-key",
-    "app_secret": "your-douyin-open-platform-app-secret",
-    "api_url": "https://open.douyin.com",
-    "poll_interval": 0.5,
-    "max_comments_per_request": 50
-  },
-  "system": {
+  "platform": "douyin",
+  "general": {
     "log_level": "INFO",
     "heartbeat_interval": 300,
-    "max_concurrent_requests": 3,
+    "max_concurrent_requests": 5,
     "temp_dir": "temp",
     "log_dir": "logs",
-    "backup_dir": "backups",
-    "compliance_check_interval": 60
+    "backup_dir": "backups"
   },
-  "compliance": {
-    "ai_disclosure_required": true,
-    "disclosure_text": "本直播间由AI数字人主播为您服务",
-    "disclosure_interval": 600,
-    "content_filter_enabled": true,
-    "sensitive_words": [
-      "政治敏感词1",
-      "政治敏感词2",
-      "虚假宣传",
-      "欺诈",
-      "传销"
-    ],
-    "max_response_length": 80,
-    "ad_label_required": true,
-    "ad_label_text": "广告",
-    "risk_warning_required": true,
-    "price_disclosure_required": true
-  },
-  "product_knowledge": {
-    "products": [
-      {
-        "id": "product_001",
-        "name": "无线降噪耳机 Pro",
-        "category": "电子产品",
-        "features": [
-          "主动降噪技术",
-          "30小时超长续航",
-          "IPX5级防水",
-          "触控操作"
-        ],
-        "price": "¥599",
-        "original_price": "¥999",
-        "discount": "6折",
-        "promo": "今日限时买一送一！",
-        "shipping": "全国包邮",
-        "warranty": "1年质保",
-        "return_policy": "7天无理由退换",
-        "stock": 500,
-        "description": "专业级无线降噪耳机，采用行业领先的降噪技术。",
-        "risk_warning": "使用前请阅读说明书，避免长时间高音量使用",
-        "certifications": ["3C认证", "CE认证"]
-      },
-      {
-        "id": "product_002",
-        "name": "智能手表 X1",
-        "category": "智能穿戴",
-        "features": [
-          "1.5英寸AMOLED屏",
-          "7天超长续航",
-          "心率血氧监测",
-          "GPS定位"
-        ],
-        "price": "¥1299",
-        "original_price": "¥1999",
-        "discount": "6.5折",
-        "promo": "前100名送原装表带",
-        "shipping": "顺丰包邮",
-        "warranty": "2年质保",
-        "return_policy": "15天无理由退换",
-        "stock": 300,
-        "description": "全能健康智能手表，24小时健康监测。",
-        "risk_warning": "医疗数据仅供参考，不能替代专业医疗建议",
-        "certifications": ["医疗器械备案"]
-      }
-    ],
-    "current_promo": "双十一大促：全场商品6折起，满300减50！",
-    "shipping_info": "全国包邮，24小时内发货，顺丰快递",
-    "return_policy": "7天无理由退换货，15天质量问题换新，1-2年质保"
-  },
-  "ai_personality": {
-    "name": "小智",
-    "style": "亲切专业",
-    "language": "中文",
-    "emoji_usage": "少量",
-    "response_style": "简洁",
-    "call_to_action": "必须包含",
-    "disclosure_frequency": "每5分钟",
-    "compliance_level": "strict"
-  },
-  "live_companion": {
-    "executable_path": "C:\\Program Files\\Douyin\\LiveCompanion\\LiveCompanion.exe",
-    "auto_start": true,
-    "auto_configure": true,
-    "scene_name": "AI直播场景",
-    "media_source_name": "数字人视频",
-    "resolution_width": 1080,
-    "resolution_height": 1920,
-    "bitrate": 6000,
-    "fps": 30
-  },
-  "monitoring": {
-    "enable_health_check": true,
-    "health_check_interval": 60,
-    "enable_performance_monitor": true,
-    "performance_threshold_cpu": 80,
-    "performance_threshold_memory": 85,
-    "enable_content_audit": true,
-    "audit_log_retention_days": 30
-  },
-  "backup": {
-    "enable_auto_backup": true,
-    "backup_interval": 1800,
-    "max_backup_files": 50,
-    "backup_path": "./backups",
-    "enable_log_rotation": true,
-    "max_log_size_mb": 100
-  },
-  "emergency": {
-    "fallback_responses": [
-      "本直播间由AI数字人主播为您服务。系统正在处理您的请求，请稍候。",
-      "感谢您的提问！由于技术原因，暂时无法回答，请查看商品详情页了解更多信息。",
-      "AI主播正在升级服务，请稍后再试。在此期间，您可以点击小黄车查看商品。"
-    ],
-    "fallback_video_path": "./assets/fallback_video.mp4",
-    "auto_restart_on_failure": true,
-    "max_restart_attempts": 3,
-    "restart_delay_seconds": 30
+  "douyin": {
+    "DOUYIN_APP_ID": "your_douyin_app_id",
+    "DOUYIN_APP_SECRET": "your_douyin_app_secret",
+    "ROOM_ID": "your_live_room_id",
+    
+    "AI_MODEL": "deepseek",
+    "AI_API_KEY": "your_ai_api_key",
+    "AI_API_URL": "https://api.deepseek.com/chat/completions",
+    
+    "TTS_PROVIDER": "aliyun",
+    "TTS_API_KEY": "your_tts_api_key",
+    "TTS_APP_ID": "your_tts_app_id",
+    "TTS_VOICE": "zh-CN-XiaoxiaoNeural",
+    "TTS_SPEED": 1.0,
+    "TTS_PITCH": 0,
+    "TTS_VOLUME": 1.0,
+    
+    "DIGITAL_HUMAN_PROVIDER": "guiji",
+    "DIGITAL_HUMAN_API_KEY": "your_digital_human_api_key",
+    "DIGITAL_HUMAN_API_URL": "https://api.guiji.ai/v1",
+    "DIGITAL_HUMAN_AVATAR_ID": "your_avatar_id",
+    "DIGITAL_HUMAN_AVATAR_NAME": "AI主播",
+    "DIGITAL_HUMAN_OUTPUT_MODE": "rtmp",
+    "DIGITAL_HUMAN_OUTPUT_URL": "rtmp://localhost/live/stream",
+    
+    "COMPLIANCE": {
+      "ai_disclosure_required": true,
+      "disclosure_text": "本直播间由AI数字人主播为您服务",
+      "disclosure_interval": 600,
+      "content_filter_enabled": true,
+      "sensitive_words": ["政治敏感词1", "政治敏感词2", "违规词1", "违规词2"],
+      "max_response_length": 100
+    },
+    
+    "PRODUCT_KNOWLEDGE": {
+      "products": [
+        {
+          "id": "product_001",
+          "name": "无线蓝牙耳机 Pro",
+          "category": "电子产品",
+          "keywords": ["耳机", "蓝牙", "无线", "降噪"],
+          "features": [
+            "主动降噪技术",
+            "30小时续航",
+            "IPX5防水",
+            "触控操作"
+          ],
+          "price": "¥599",
+          "original_price": "¥999",
+          "discount": "6折",
+          "promo": "今日限时买一送一！",
+          "shipping": "全国包邮",
+          "warranty": "1年质保",
+          "return_policy": "7天无理由退货",
+          "stock": 500,
+          "description": "专业级无线蓝牙耳机，采用行业领先的降噪技术。"
+        },
+        {
+          "id": "product_002",
+          "name": "智能手表 X1",
+          "category": "穿戴设备",
+          "keywords": ["手表", "智能", "健康", "运动"],
+          "features": [
+            "1.5英寸AMOLED屏幕",
+            "7天续航",
+            "心率监测",
+            "GPS定位"
+          ],
+          "price": "¥1299",
+          "original_price": "¥1999",
+          "discount": "6.5折",
+          "promo": "购买送额外表带",
+          "shipping": "顺丰包邮",
+          "warranty": "2年质保",
+          "return_policy": "30天退换",
+          "stock": 300,
+          "description": "高级智能手表，提供全面的健康追踪功能。"
+        }
+      ],
+      "current_promo": "双十一特惠：全场商品7折起，满300包邮！",
+      "shipping_info": "全国包邮，3-5个工作日送达",
+      "return_policy": "7天无理由退货，所有商品享受1-2年质保"
+    },
+    
+    "AI_PERSONALITY": {
+      "name": "小智",
+      "style": "活泼",
+      "language": "中文",
+      "emoji_usage": "适度",
+      "response_style": "简洁",
+      "call_to_action": "总是",
+      "disclosure_frequency": "每10分钟"
+    },
+    
+    "LIVE_COMPANION": {
+      "auto_start": true,
+      "companion_path": "C:\\Program Files\\Douyin\\LiveCompanion\\LiveCompanion.exe",
+      "scene_name": "AI数字人直播",
+      "resolution_width": 1080,
+      "resolution_height": 1920,
+      "fps": 30,
+      "bitrate": 4000
+    },
+    
+    "PERFORMANCE": {
+      "max_response_time_ms": 600,
+      "max_queue_size": 50,
+      "cleanup_interval": 3600,
+      "health_check_interval": 60
+    }
   }
 }

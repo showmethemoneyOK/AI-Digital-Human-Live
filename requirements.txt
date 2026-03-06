@@ -1,66 +1,50 @@
 # AI数字人直播系统依赖包
 
 # 核心依赖
-requests>=2.31.0
 aiohttp>=3.9.0
-asyncio>=3.4.3
-python-dotenv>=1.0.0
+websockets>=12.0
+requests>=2.31.0
 
-# Web框架
-flask>=3.0.0
-flask-cors>=4.0.0
+# Web框架（TikTok Webhook需要）
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+
+# 配置管理
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
 
 # 数据处理
-pandas>=2.0.0
 numpy>=1.24.0
-
-# 数据库
-sqlite3>=3.0.0  # Python内置
-redis>=5.0.0
-
-# 自动化控制
-pyautogui>=0.9.54
-pygetwindow>=0.0.9
-pymouse>=1.0.0
+pandas>=2.0.0
 
 # 音频处理
 pydub>=0.25.1
-wave>=0.0.2  # Python内置
+soundfile>=0.12.0
 
-# 视频处理
-opencv-python>=4.8.0
-pillow>=10.0.0
+# 数据库
+sqlite3>=3.0.0  # Python内置
 
-# WebSocket
-websockets>=12.0
-websocket-client>=1.6.0
+# 日志和监控
+structlog>=23.0.0
+prometheus-client>=0.19.0
 
-# 配置管理
-pyyaml>=6.0
-toml>=0.10.2
+# 工具类
+click>=8.1.0
+rich>=13.0.0
+tqdm>=4.65.0
 
-# 日志管理
-loguru>=0.7.0
-colorlog>=6.7.0
-
-# 监控工具
-psutil>=5.9.0
-gpustat>=1.0.0
-
-# 国产API SDK (可选)
-# alibabacloud-nls-2023-09-30>=1.0.0  # 阿里云TTS
-# volcengine-python-sdk>=1.0.0  # 火山引擎
-
-# 开发工具
+# 开发依赖
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
 black>=23.0.0
 flake8>=6.0.0
-pytest>=7.4.0
-
-# 其他工具
-chardet>=5.2.0
-urllib3>=2.0.0
-certifi>=2023.7.22
+mypy>=1.0.0
 
 # 平台特定
-# TikTok: 需要额外安装obs-websocket-py
-# 抖音: 需要阿里云/讯飞SDK
+# 抖音：需要额外配置
+# TikTok：需要额外配置
+
+# 注意：实际部署时可能需要根据平台选择安装
+# pip install -r requirements.txt --no-deps  # 不安装开发依赖

@@ -1,41 +1,6 @@
 {
-  "platform": {
-    "platform": "tiktok",
-    "room_id": "your_tiktok_live_room_id",
-    "user_unique_id": "@your_tiktok_username",
-    "stream_url": "rtmp://live.tiktok.com/rtmp/",
-    "stream_key": "your_stream_key_from_tiktok",
-    "timeout": 30
-  },
-  "llm": {
-    "api_key": "sk-your-openai-api-key-here",
-    "api_url": "https://api.openai.com/v1/chat/completions",
-    "model": "gpt-4o-mini",
-    "temperature": 0.7,
-    "max_tokens": 200,
-    "max_retries": 3
-  },
-  "tts": {
-    "api_key": "your-elevenlabs-api-key-here",
-    "api_url": "https://api.elevenlabs.io/v1/text-to-speech",
-    "voice_id": "21m00Tcm4TlvDq8ikWAM",
-    "language": "en-US",
-    "model_id": "eleven_monolingual_v1"
-  },
-  "digital_human": {
-    "api_key": "your-d-id-api-key-here",
-    "api_url": "https://api.d-id.com/talks",
-    "avatar_id": "your-avatar-id",
-    "render_mode": "cloud",
-    "avatar_image_url": "https://your-cdn.com/avatar.png"
-  },
-  "danmaku": {
-    "api_key": "your-tikhub-api-key-here",
-    "api_url": "https://api.tikhub.io/api/v1/tiktok/web/fetch_live_im_fetch",
-    "poll_interval": 0.5,
-    "max_comments_per_request": 50
-  },
-  "system": {
+  "platform": "tiktok",
+  "general": {
     "log_level": "INFO",
     "heartbeat_interval": 300,
     "max_concurrent_requests": 5,
@@ -43,85 +8,132 @@
     "log_dir": "logs",
     "backup_dir": "backups"
   },
-  "compliance": {
-    "ai_disclosure_required": true,
-    "disclosure_text": "This is an AI-powered digital human live stream.",
-    "disclosure_interval": 600,
-    "content_filter_enabled": true,
-    "sensitive_words": ["政治敏感词1", "政治敏感词2"],
-    "max_response_length": 100
-  },
-  "product_knowledge": {
-    "products": [
-      {
-        "id": "product_001",
-        "name": "Wireless Earbuds Pro",
-        "category": "electronics",
-        "features": [
-          "Active Noise Cancellation",
-          "30-hour battery life",
-          "IPX5 waterproof",
-          "Touch controls"
-        ],
-        "price": "$79.99",
-        "original_price": "$129.99",
-        "discount": "38% off",
-        "promo": "Buy 1 get 1 free today only!",
-        "shipping": "Free worldwide shipping",
-        "warranty": "1-year warranty",
-        "return_policy": "30-day money back guarantee",
-        "stock": 500,
-        "description": "Professional-grade wireless earbuds with industry-leading noise cancellation technology."
-      },
-      {
-        "id": "product_002",
-        "name": "Smart Watch X1",
-        "category": "wearables",
-        "features": [
-          "1.5\" AMOLED display",
-          "7-day battery life",
-          "Heart rate monitoring",
-          "GPS tracking"
-        ],
-        "price": "$129.99",
-        "original_price": "$199.99",
-        "discount": "35% off",
-        "promo": "Free extra band with purchase",
-        "shipping": "Free express shipping",
-        "warranty": "2-year warranty",
-        "return_policy": "30-day return policy",
-        "stock": 300,
-        "description": "Advanced smartwatch with comprehensive health tracking features."
-      }
+  "tiktok": {
+    "TIKTOK_APP_ID": "your_tiktok_app_id",
+    "TIKTOK_APP_SECRET": "your_tiktok_app_secret",
+    "TIKTOK_ACCESS_TOKEN": "your_tiktok_access_token",
+    "TIKTOK_ROOM_ID": "your_live_room_id",
+    "WEBHOOK_SECRET": "your_webhook_secret",
+    "WEBHOOK_URL": "https://your-domain.com/tiktok/webhook",
+    "WEBHOOK_EVENTS": [
+      "live_comment",
+      "live_gift",
+      "live_like",
+      "live_share",
+      "live_follow"
     ],
-    "current_promo": "Black Friday Special: All products 30% off + free shipping!",
-    "shipping_info": "Free shipping worldwide, delivery in 5-7 business days",
-    "return_policy": "30-day hassle-free returns, 1-2 year warranty on all products"
-  },
-  "ai_personality": {
-    "name": "Alex",
-    "style": "energetic",
-    "language": "english",
-    "emoji_usage": "moderate",
-    "response_style": "concise",
-    "call_to_action": "always",
-    "disclosure_frequency": "every_10_minutes"
-  },
-  "obs_config": {
-    "obs_websocket_host": "localhost",
-    "obs_websocket_port": 4455,
-    "obs_websocket_password": "your_obs_password",
-    "video_source_name": "Digital_Human_Video",
-    "scene_name": "Live_Scene",
-    "resolution_width": 1080,
-    "resolution_height": 1920,
-    "fps": 30,
-    "bitrate": 4000
-  },
-  "backup": {
-    "enable_auto_backup": true,
-    "backup_interval": 3600,
-    "max_backup_files": 30,
-    "backup_path": "./backups"
+    
+    "AI_MODEL": "gpt",
+    "AI_API_KEY": "your_openai_api_key",
+    "AI_API_URL": "https://api.openai.com/v1/chat/completions",
+    
+    "TTS_PROVIDER": "elevenlabs",
+    "TTS_API_KEY": "your_elevenlabs_api_key",
+    "TTS_VOICE": "21m00Tcm4TlvDq8ikWAM",
+    "TTS_SPEED": 1.0,
+    "TTS_PITCH": 0,
+    "TTS_VOLUME": 1.0,
+    "TTS_LANGUAGE": "en-US",
+    
+    "DIGITAL_HUMAN_PROVIDER": "heygen",
+    "DIGITAL_HUMAN_API_KEY": "your_heygen_api_key",
+    "DIGITAL_HUMAN_AVATAR_ID": "your_avatar_id",
+    "DIGITAL_HUMAN_AVATAR_NAME": "AI Host",
+    "DIGITAL_HUMAN_OUTPUT_MODE": "virtual_camera",
+    "DIGITAL_HUMAN_VIRTUAL_CAMERA": "AI Digital Human",
+    
+    "COMPLIANCE": {
+      "ai_disclosure_required": true,
+      "disclosure_text": "AI Generated Content / Virtual Host",
+      "disclosure_interval": 300,
+      "content_filter_enabled": true,
+      "sensitive_words": ["hate speech", "violence", "harassment", "scam"],
+      "max_response_length": 80,
+      "human_interaction_required": true,
+      "human_interval_minutes": 15,
+      "last_human_interaction": null
+    },
+    
+    "PRODUCT_KNOWLEDGE": {
+      "products": [
+        {
+          "id": "product_001",
+          "name": "Wireless Earbuds Pro",
+          "category": "electronics",
+          "keywords": ["earbuds", "wireless", "bluetooth", "noise cancellation"],
+          "features": [
+            "Active Noise Cancellation",
+            "30-hour battery life",
+            "IPX5 waterproof",
+            "Touch controls"
+          ],
+          "price": "$79.99",
+          "original_price": "$129.99",
+          "discount": "38% off",
+          "promo": "Buy 1 get 1 free today only!",
+          "shipping": "Free worldwide shipping",
+          "warranty": "1-year warranty",
+          "return_policy": "30-day money back guarantee",
+          "stock": 500,
+          "description": "Professional-grade wireless earbuds with industry-leading noise cancellation technology."
+        },
+        {
+          "id": "product_002",
+          "name": "Smart Watch X1",
+          "category": "wearables",
+          "keywords": ["watch", "smart", "fitness", "health"],
+          "features": [
+            "1.5\" AMOLED display",
+            "7-day battery life",
+            "Heart rate monitoring",
+            "GPS tracking"
+          ],
+          "price": "$129.99",
+          "original_price": "$199.99",
+          "discount": "35% off",
+          "promo": "Free extra band with purchase",
+          "shipping": "Free express shipping",
+          "warranty": "2-year warranty",
+          "return_policy": "30-day return policy",
+          "stock": 300,
+          "description": "Advanced smartwatch with comprehensive health tracking features."
+        }
+      ],
+      "current_promo": "Black Friday Special: All products 30% off + free shipping!",
+      "shipping_info": "Free shipping worldwide, delivery in 5-7 business days",
+      "return_policy": "30-day hassle-free returns, 1-2 year warranty on all products"
+    },
+    
+    "AI_PERSONALITY": {
+      "name": "Alex",
+      "style": "energetic",
+      "language": "english",
+      "emoji_usage": "moderate",
+      "response_style": "concise",
+      "call_to_action": "always",
+      "disclosure_frequency": "every_5_minutes"
+    },
+    
+    "OBS_CONFIG": {
+      "obs_websocket_host": "localhost",
+      "obs_websocket_port": 4455,
+      "obs_websocket_password": "your_obs_password",
+      "video_source_name": "Digital_Human_Video",
+      "scene_name": "Live_Scene",
+      "resolution_width": 1080,
+      "resolution_height": 1920,
+      "fps": 30,
+      "bitrate": 4000,
+      "stream_url": "rtmp://live.tiktok.com/rtmp/",
+      "stream_key": "your_stream_key_from_tiktok"
+    },
+    
+    "PERFORMANCE": {
+      "max_response_time_ms": 800,
+      "max_queue_size": 30,
+      "cleanup_interval": 1800,
+      "health_check_interval": 30,
+      "human_interaction_check_interval": 900
+    }
   }
 }
